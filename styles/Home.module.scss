@@ -1,0 +1,133 @@
+.main {
+  display: flex;
+  gap: 1.25rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  max-width: 75rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.offices {
+  &Active {
+    color: blue;
+  }
+}
+
+.employee {
+  background: white;
+  border-radius: 0.125rem;
+  padding: 0.5rem 0.5rem 1.25rem;
+  box-shadow: 0 0.25rem 0.25rem rgba(black, 0.1);
+  color: black;
+  display: inline-grid;
+
+  &Grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    width: 100%;
+
+    @media (max-width: 60rem) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 41.25rem) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 28.75rem) {
+      grid-template-columns: 100%;
+    }
+  }
+
+  &List {
+    display: flex;
+    gap: 1.25rem;
+    flex-direction: column;
+    width: 100%;
+
+    .employee {
+      display: inline-flex;
+
+      &ImgHolder {
+        width: 20rem;
+      }
+
+      &Info {
+        padding: 0 0 0 0.5rem;
+      }
+    }
+  }
+
+  &Links {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    img {
+      width: 1.25rem;
+    }
+  }
+
+  &ImgHolder {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #E6E6E6;
+    height: 11.25rem;
+
+    img {
+      max-height: 100%;
+      width: auto;
+      max-width: 100%;
+      box-shadow: 0 0 2rem rgba(black, 0.1);
+    }
+  }
+
+  &Info {
+    padding: 0.5rem 0;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.tools {
+  background: white;
+  border-radius: 0.125rem;
+  box-shadow: 0 0.25rem 0.25rem rgba(black, 0.1);
+  padding: 0.5rem;
+  width: 100%;
+  display: flex;
+  gap: 0.75rem;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &Section > label {
+    color: #AFAFAF;
+    font-weight: bold;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+
+  input[type="radio"] {
+    margin-left: 0.25rem;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 0.25rem;
+  }
+
+  input[type="text"] {
+    display: block;
+    padding: 0.25rem;
+    margin-right: 0.25rem;
+  }
+
+  select {
+    display: block;
+  }
+}
